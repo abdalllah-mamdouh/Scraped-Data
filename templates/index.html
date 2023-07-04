@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en"> 
+    <head>
+        <meta charset="utf-8" />
+        <title>Scraped Data</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    </head>
+    <body>
+        <div class="intro-section">
+            <h1>Scraped Data</h1>
+            <p class="intro-text">Project by the Digital Marketing Department</p>
+        </div>
+        <ul>
+            {% for item in data %}
+                <li>{{ item }}</li>
+            {% endfor %}
+        </ul>
+        <form action="{{ url_for('download') }}" method="POST">
+            <input type="hidden" name="scraped_text" value="{{ data }}">
+            <input type="submit" value="Download as Text File">
+    </body>
+</html>

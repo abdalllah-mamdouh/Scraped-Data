@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Website Scraper</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    </head>
+<body>
+    <h1>Website Scraper</h1>
+    <form method="post">
+        <label for="website_url">Website URL:</label>
+        <input type="text" id="website_url" name="website_url" required>
+        <input type="submit" value="Scrape">
+    </form>
+</body>
+</html>
